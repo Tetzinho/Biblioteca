@@ -5,10 +5,7 @@ const Sequelize = require('sequelize');
 const sequelize = new Sequelize(dbconfig.host, {
   port: dbconfig.port,
   dialect: dbconfig.dialect,
-  {
-    host: dbconfig.host,
-    dialect: dbconfig.dialect,
-    pool: {
+  pool: {
       max: dbconfig.pool.max,
       min: dbconfig.pool.min,
       acquire: dbconfig.pool.acquire,
