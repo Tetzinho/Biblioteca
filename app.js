@@ -11,14 +11,6 @@ app.use(
     origin: '*',
   })
 );
-//BANCO DE DADOS
-//teste de conexao
-// try {
-//   models.sequelize.authenticate();
-//   console.log('conexao realizada com sucesso');
-// } catch (error) {
-//   console.log('erro de conexao com BD', error);
-// }
 models.sequelize
   .sync() //{ force: true }
   .then(() => {
